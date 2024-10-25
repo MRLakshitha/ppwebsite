@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPoint-like Insert Tab</title>
+  <link rel="stylesheet" href="insert.css">
+</head>
+<body>
+  <!-- Toolbar with Insert Tab -->
+  <div class="toolbar">
+    <button onclick="showInsertTab()">Insert</button>
+  </div>
+
+  <!-- Insert Tab Options -->
+  <div id="insertTab" class="tab-content" style="display: none;">
+    <button onclick="insertTextBox()">Text Box</button>
+    <button onclick="deleteElement()">Delete</button>
+    <button onclick="resizeElement(width, height)">resizeElement</button>
+    <button onclick="uploadImage()">Image</button>
+    <button onclick="insertOnlinePhoto()">Online Photos</button>
+    <button onclick="addShape('rectangle')">Rectangle</button>
+    <button onclick="addShape('circle')">Circle</button>
+    
+    <button onclick="insertScreenshot()">Screenshot</button>
+    <button onclick="insertChart()">Chart</button>
+     <button onclick="insertWordArt()">Word Art</button> 
+     
+    <button onclick="insertTable()">Table</button>
+    
+    
+    <div class="menu-tab1">
+    <div id="textOptions">
+        <label for="textColor">Text Color:</label>
+        <input type="color" id="textColor" onchange="changeTextColor()">
+    </div>
+    <div id="shapeOptions">
+        <label for="shapeColor">Shape Color:</label>
+        <input type="color" id="shapeColor" onchange="changeShapeColor()">
+    </div>
+    <div id="insertOptions">
+        <label for="symbolSelect">Symbol:</label>
+        <select id="symbolSelect">
+            <option value="★">Star</option>
+            <option value="✓">Checkmark</option>
+            <option value="✈">Airplane</option>
+            <option value="♛">Crown</option>
+            <option value="♪">Music Note</option>
+            <option value="⚽">Soccer Ball</option>
+            <option value="☀">Sun</option>
+            <option value="❤">Heart</option>
+            <option value="☕">Coffee</option>
+            <option value="☂">Umbrella</option>
+        </select>
+        <button onclick="insertSymbol()">Insert Symbol</button>
+    </div>
+    
+    <div id="insertOptions">
+        <label for="iconSelect">Icon:</label>
+        <select id="iconSelect">
+            <option value="📷">Camera</option>
+            <option value="📞">Phone</option>
+            <option value="🔔">Bell</option>
+            <option value="🔒">Lock</option>
+            <option value="💡">Lightbulb</option>
+            <option value="📍">Pin</option>
+            <option value="✉">Envelope</option>
+            <option value="💻">Laptop</option>
+            <option value="🚗">Car</option>
+            <option value="⚙">Gear</option>
+        </select>
+        <button onclick="insertIcon()">Insert Icon</button>
+    </div>
+    
+    <div id="textOptions">
+       
+        <!-- Text Highlighter -->
+        <label for="highlightColor"></label>
+        <input type="color" id="highlightColor" onchange="highlightText()">
+        
+        <!-- Bullets and Numbering -->
+        <button onclick="addBullet()">Bullet</button>
+        <button onclick="addNumberedList()">Numbered Bullets</button>
+    </div>
+    <!-- Equation Options Dropdown -->
+    <div id="equationTab">
+        
+        <label for="equationType"></label>
+        <select id="equationType" onchange="insertEquation()">
+            <option value="">Select an equation</option>
+            <option value="quadratic">Quadratic Formula</option>
+            <option value="pythagorean">Pythagorean Theorem</option>
+            <option value="euler">Euler's Formula</option>
+            <option value="binomial">Binomial Theorem</option>
+            <option value="areaCircle">Area of a Circle</option>
+        </select>
+    </div>
+    <button onclick="openCommentBox()">Add Comment</button>
+</div>
+
+<!-- Hidden comment box popup -->
+<div id="commentBox" style="display: none;">
+    <textarea id="commentText" placeholder="Enter your comment"></textarea>
+    <button onclick="addComment()">Save Comment</button>
+    <button onclick="closeCommentBox()">Cancel</button>
+</div>
+
+<!-- Comment display section -->
+<div id="commentsSection">
+    <ul id="commentsList"></ul>
+</div>
+   </div>
+   
+</div>
+</div>
+
+  <!-- Canvas where elements are inserted -->
+  <div id="canvas" class="canvas"></div>
+
+  <!-- Hidden file input for uploading images -->
+  <input type="file" id="imageUpload" accept="image/*" onchange="loadImage(event)" style="display: none;">
+
+  
+
+
+
+  <script src="insert.js"></script>
+</body>
+</html>

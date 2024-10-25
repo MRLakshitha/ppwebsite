@@ -1,0 +1,18 @@
+.toolbar {
+    background-color: #ebab59d0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+}
+
+button {
+    padding: 5px 10px;
+   gap: 9px;
+}
+
+select, input {
+    padding: 5px;
+    margin-right: 10px;
+}

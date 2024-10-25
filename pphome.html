@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Presentation Tool</title>
+    <link rel="stylesheet" href="pphome.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="navbar">
+        <div class="menu-tabs">
+            <button class="menu-tab" id="fileButton">File</button> 
+            <button class="menu-tab active"><a href="pphome.html">Home</a></button>
+            <!-- <button class="menu-tab"><href src="insert1.html">insert</href> </button> -->
+            <!-- <button class="menu-tab" onclick="showInsertTab()" id="insertTab" class="tab-content">Insert</button> -->
+            <button class="menu-tab"> <a href="insert.html">Insert</a></button>
+            <button class="menu-tab">Design</button>
+            <button class="menu-tab">Transitions</button>
+            <button class="menu-tab">Animations</button>
+            <button class="menu-tab" >Slide Show</button>
+            <button class="menu-tab">Review</button>
+            <button class="menu-tab">View</button>
+        </div>
+        </div>
+        </div>
+        <!-- <iframe src="ppnav.html"  style="border:none;"></iframe> -->
+
+        <div class="toolbar">
+        <button onclick="addSlide()">Add Slide</button>
+        <button onclick="deleteSlide()">Delete Slide</button>
+        <button onclick="addTextBox()">Add Text Box</button>
+        
+        <button onclick="uploadImage()">Upload Image</button>
+
+        <!-- Shape tools -->
+        <button onclick="addRectangle()">Add Rectangle</button>
+        <button onclick="addCircle()">Add Circle</button>
+        <button onclick="addLine()">Add Line</button>
+
+        <!-- Font and text controls -->
+        <select id="fontFamily" onchange="changeFontFamily()">
+            <!-- Options dynamically added here by JavaScript -->
+        </select>
+        
+        <!-- <select id="fontFamily" onchange="changeFontFamily()">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+        </select>-->
+        <input type="number" id="fontSize" placeholder="Font Size" onchange="changeFontSize()">
+        <input type="color" id="fontColor" onchange="changeFontColor()">
+         
+        <!-- Text alignment -->
+        <button onclick="alignText('left')">Align Left</button>
+        <button onclick="alignText('center')">Align Center</button>
+        <button onclick="alignText('right')">Align Right</button>
+    
+        <!-- Font family dropdown (already implemented) -->
+        <!-- <select id="fontFamily" onchange="changeFontFamily()">
+            Font options will be populated dynamically -->
+        <!-- </select> -->
+    <br>
+    <br>
+        <!-- New buttons for bold, italic, and underline -->
+        <button onclick="toggleBold()">B</button> <!-- Bold button -->
+        <button onclick="toggleItalic()"><i>I</i></button> <!-- Italic button -->
+        <button onclick="toggleUnderline()"><u>U</u></button> <!-- Underline button -->
+    </div>
+    
+    <!-- Example text box for selecting -->
+    <!-- <div class="text-box" contenteditable="true" style="border: 1px solid #000; width: 200px; padding: 10px; margin-top: 10px;">
+        Click here to edit text...
+    </div> -->
+    
+
+    <input type="file" id="imageUpload" style="display:none;" onchange="loadImage(event)">
+<div >
+   <div class="slide">
+    <ul id="slidesList">
+        <!-- Dynamic slides will be added here -->
+    </ul>
+    
+   
+        <div class="slide-thumbnails">
+          <button class="add-slide-btn" onclick="addSlide()">Add Slide</button>
+          <div class="slides-list" id="slides-list">
+            <!-- Dynamically added slide thumbnails will appear here -->
+             
+          </div>
+        </div>
+</div>
+    <!-- <div id="canvas" class="canvas"></div> -->
+    <div class="canvas-container">
+        <div id="canvas" class="canvas" contenteditable="false"></div>
+    </div>
+    </div>
+
+
+    <!-- file tab -->
+    <script src="ppnav.js"></script>
+    <!-- home tab -->
+    <script src="pphome.js"></script>
+    <script src="insert1.js"></script>
+</body>
+</html>
+<!-- .canvas-container {
+    /* width: 70%;
+    padding-left: 300px; */
+    display: flex;
+    grid: 150px / auto auto auto;
+    grid-gap: 10px;
+    border-right: 2px solid #ddd;
+    padding-left: 230px;
+} -->

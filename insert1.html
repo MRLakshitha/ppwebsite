@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPoint-like Insert Tab</title>
+  <link rel="stylesheet" href="insert1.css">
+</head>
+<body>
+  <!-- Toolbar with Tabs -->
+  <div class="toolbar">
+    <button onclick="showInsertTab()">Insert</button>
+    <!-- Add more tabs like Home, Design, etc., if needed -->
+  </div>
+
+  <!-- Insert Tab Options -->
+  <!-- <div id="insertTab" class="tab-content" style="display: none;"> -->
+    <div class="menus">
+    <button onclick="insertTextBox()">Text Box</button>
+    <button onclick="uploadImage()">Image</button>
+    <button onclick="addShape('rectangle')">Rectangle</button>
+    <button onclick="addShape('circle')">Circle</button>
+    <button onclick="addShape('line')">Line</button>
+  </div>
+
+  <!-- Canvas where elements are inserted -->
+  <div id="canvas" class="canvas"></div>
+
+  <!-- Hidden file input for uploading images -->
+  <input type="file" id="imageUpload" accept="image/*" onchange="loadImage(event)" style="display: none;">
+
+  <script src="insert1.js"></script>
+</body>
+</html>

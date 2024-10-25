@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .toolbar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+  }
+  .menu-tab1, .textOptions{
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .equation {
+    padding: 5px;
+    color: #333;
+}
+
+.selected {
+    border: 1px solid blue; /* Highlight selected element */
+}
+
+  .canvas {
+    flex: 1;
+    position: relative;
+    background-color: #fff;
+    overflow: auto;
+    padding: 20px;
+  }
+  .bullet-list li {
+    list-style-type: disc;
+    padding-left: 10px;
+}
+
+.numbered-list li {
+    list-style-type: decimal;
+    padding-left: 10px;
+}
+
+  .text-box, .shape-box {
+    position: absolute;
+    padding: 5px;
+    cursor: move;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    user-select: none;
+    border: 1px solid transparent;
+  }
+  
+  .shape-box {
+    display: inline-block;
+    background-color: #007bff;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* .text-box {
+    cursor: pointer;
+     */
+     #commentBox {
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        background-color: #f3f3f3;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 300px;
+        z-index: 100;
+    }
+    
+    #commentText {
+        width: 100%;
+        height: 80px;
+    }
+    
+    #commentsList {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .comment-item {
+        margin-bottom: 10px;
+        padding: 5px;
+        background-color: #e9e9e9;
+        border: 1px solid #ddd;
+    }
+    
